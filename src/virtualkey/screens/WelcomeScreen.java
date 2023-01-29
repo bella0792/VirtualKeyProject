@@ -1,5 +1,6 @@
 package virtualkey.screens;
 
+import virtualkey.services.ScreenService;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -52,6 +53,15 @@ public class WelcomeScreen implements Screen {
 
             case 1: // Show Files in Directory
                 this.ShowFiles();
+                
+                this.Show();
+                
+                break;
+                
+            case 2: // Show File Options menu
+            	ScreenService.setCurrentScreen(ScreenService.FileOptionsScreen);
+                ScreenService.getCurrentScreen().Show();
+                ScreenService.getCurrentScreen().GetUserInput();
                 
                 this.Show();
                 

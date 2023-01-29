@@ -1,7 +1,7 @@
 package virtualkey.screens;
 
 import virtualkey.services.ScreenService;
-
+import virtualkey.services.DirectoryService;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -82,7 +82,7 @@ public class WelcomeScreen implements Screen {
     	//Finished TODO Task
 
         System.out.println("List of Files: ");
-    	
+        DirectoryService.PrintFiles();
     }
     
     private int getOption() {

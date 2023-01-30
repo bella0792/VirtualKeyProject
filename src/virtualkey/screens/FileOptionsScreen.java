@@ -67,7 +67,10 @@ public class FileOptionsScreen implements Screen {
             
           
             default:
-                System.out.println("Invalid Option");
+                
+                
+                System.out.println();	 
+                System.out.println("Invalid Option, Please Select From Options Menu");
                 break;
                 
                 

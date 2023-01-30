@@ -2,6 +2,7 @@ package virtualkey.screens;
 
 
 import java.io.File;
+
 import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
@@ -11,12 +12,12 @@ import java.util.Scanner;
 
 
 import virtualkey.services.ScreenService;
-
+import virtualkey.entities.Directory;
 
 public class FileOptionsScreen implements Screen {
 	
 	
-	
+	private Directory dir = new Directory();
 	private ArrayList<String> options = new ArrayList<>();
 
     public FileOptionsScreen() {
@@ -112,6 +113,18 @@ public class FileOptionsScreen implements Screen {
 
         System.out.println("You are searching for a file named: " + fileName);
         
+        ArrayList<File> files = dir.getFiles();
+
+
+        for(int i = 0; i < files.size(); i++) {
+			if(files.get(i).getName().equals(fileName)) {
+				System.out.println("Found " + fileName);
+				found = true;
+			}
+        }
+        if (found == false) {
+        	System.out.println("File not found");
+        }
         
     }
     

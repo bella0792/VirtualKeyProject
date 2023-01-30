@@ -9,7 +9,7 @@ import java.nio.file.Path;
 
 public class Directory {
 
-   public static final String name = "/home/nikitachouhanvo/Project/VirtualKeyProject/src/";
+   public static final String name = "/home/nikitachouhanvo/Project/VirtualKeyProject/src/virtualkey/";
 
    //TODO: Possibly use a HashMap? Too complex for now.
     private ArrayList<File> files = new ArrayList<File>();

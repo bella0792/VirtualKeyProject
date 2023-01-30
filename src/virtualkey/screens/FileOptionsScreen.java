@@ -115,6 +115,15 @@ public class FileOptionsScreen implements Screen {
 
         System.out.println("You are deleting a file named: " + fileName);
         
+        Path path = FileSystems.getDefault().getPath(Directory.name + fileName).toAbsolutePath();
+		File file = path.toFile();
+	      if (file.delete()) {
+	    	  System.out.println("Deleted File: " + file.getName());
+	    	  dir.getFiles().remove(file);
+	      } else {
+	        System.out.println("Failed to delete file:" + fileName + ", file was not found.");
+	      }       
+        
         
 	    
     }
